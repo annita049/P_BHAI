@@ -52,7 +52,7 @@ function LikeComment({
   return (
     <div className="w-full px-15 flex justify-between items-center">
       <div
-        className="flex gap-1 rounded-xl px-4 py-2 hover:cursor-pointer hover:bg-gray-700"
+        className="flex gap-1 rounded-xl px-4 py-2 hover:cursor-pointer hover:bg-gray-200 dark:hover:bg-gray-700"
         onClick={handleLike}>
         {liked ? likedSolidIcon : likeIcon}
         <div>{localPost?.likes?.length ?? "0"} Likes</div>
@@ -60,7 +60,7 @@ function LikeComment({
 
       <div
         className={`flex gap-1 rounded-xl px-4 py-2 hover:cursor-pointer ${
-          commentsOpen ? `bg-gray-700 hover:bg-gray-500` : `hover:bg-gray-700`
+          commentsOpen ? `bg-gray-200 dark:bg-gray-700 dark:hover:bg-gray-500` : `dark:hover:text-gray-700`
         }`}
         onClick={handleClick}>
         {commentIcon}

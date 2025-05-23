@@ -3,9 +3,9 @@ import React from "react";
 function Tag({ Icon, label, selected, onClick, imageSrc, isActive }) {
   return (
     <div
-      className={`flex w-full justify-start items-center gap-2 px-4 py-3 rounded-2xl cursor-pointer transition-all duration-200 ${
-        !selected && "hover:bg-gray-500"
-      } text-lg ${selected ? "bg-gray-700" : ""}`}
+      className={`flex w-full justify-start items-center gap-5 px-4 py-2.5 rounded-lg cursor-pointer transition-all duration-200 ${
+        !selected && "hover:bg-[#dfeef4] dark:hover:bg-gray-600"
+      } text-lg ${selected ? "bg-[#dbeaf1] dark:hover:bg-gray-600" : ""}`}
       onClick={onClick}>
       {imageSrc && (
         <img
@@ -14,7 +14,7 @@ function Tag({ Icon, label, selected, onClick, imageSrc, isActive }) {
           className="w-10 h-10 rounded-full object-cover"
         />
       )}
-      {Icon && <span className="icon text-lg">{Icon}</span>}
+      {Icon && <span className="icon text-sm">{Icon}</span>}
       <p className="truncate">{label}</p>
     </div>
   );

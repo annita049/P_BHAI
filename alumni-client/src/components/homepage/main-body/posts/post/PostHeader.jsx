@@ -4,7 +4,7 @@ function PostHeader({  author , createdAt }) {
   return (
 
       <div className="flex justify-start gap-4 items-center ">
-        <div className="rounded-full h-17 w-17  bg-gray-500 p-1">
+        <div className="rounded-full h-13 w-13">
           <img
             src={author?.image??"./avatar.png"}
             alt="profile-picture"

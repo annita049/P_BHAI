@@ -5,7 +5,7 @@ import PostHeader from "./PostHeader";
 function Posts({post}) {
 
   return (
-  <div className=" bg-gray-600 my-4 p-4 rounded-md">
+  <div className="mt-7 bg-white dark:bg-gray-600 my-4 p-4 rounded-2xl">
       <PostHeader author={post.author} createdAt={post.createdAt} />
       <PostBody description={post.description} images={post.images} />
       <PostFooter

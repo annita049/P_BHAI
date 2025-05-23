@@ -19,14 +19,14 @@ const menuItems = [
   { id: 2, Icon: eventIcon, label: "Events" },
   { id: 3, Icon: hiringIcon, label: "Hiring" },
   { id: 4, Icon: facultyIcon, label: "Faculty" }, 
-  { id: 5, Icon: documentIcon, label: "Resume" },
+  // { id: 5, Icon: documentIcon, label: "Resume" },
 ];
 function Homepage() {  
   const [selectedTag, setSelectedTag] = React.useState(3);
   console.log(selectedTag);
 
   return (
-    <div className="h-screen w-screen grid grid-cols-1 lg:grid-cols-12">
+    <div className="h-screen w-screen grid grid-cols-1 lg:grid-cols-12 bg-[#f3f2f1] dark:bg-slate-900 dark:text-white">
       <div className="hidden lg:col-span-4 xl:col-span-3 lg:block ">
         <Sidebar {...{ menuItems,selectedTag, setSelectedTag }} />
       </div>

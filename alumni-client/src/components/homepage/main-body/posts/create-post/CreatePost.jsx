@@ -31,7 +31,7 @@ function CreatePost() {
 
   return (
     <>
-      <div className="bg-gray-300 p-4 rounded-2xl" ref={formRef}>
+      <div className="bg-white dark:bg-gray-600 p-4 rounded-2xl" ref={formRef}>
         <div className="flex items-center gap-2 justify-center">
           <Avatar avatar={authUser?.image || avatar} />
           <FakeInput {...{ formOpen, setFormOpen }} />

@@ -3,6 +3,8 @@ import { homeIcon,messagesIcon,logoutIcon,LogInIcon } from "../../assets/icons";
 import Search from "./Search";
 import { Link,useNavigate } from "react-router-dom";
 import { useUserStore } from "../../store/useUserStore";
+
+
 function Navbar() {
   const { logOut,authUser } = useUserStore();
   const navigate = useNavigate();
@@ -14,7 +16,7 @@ function Navbar() {
         console.log(authUser);
       }
     } catch (error) {
-      console.log("no user logged in ")
+      console.log("no user logged in ", error)
     }
   }, [authUser]);
   const handleLogOut = async () => {
