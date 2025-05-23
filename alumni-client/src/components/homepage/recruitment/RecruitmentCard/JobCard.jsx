@@ -19,7 +19,7 @@ const JobCard = ({
     return [...perks, ...benefits];
   }
   return (
-    <div className="w-full min-w-84 h-auto bg-gray-100 p-4 rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition-shadow duration-200">
+    <div className="w-full min-w-84 h-auto bg-white dark:bg-gray-800 p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-200">
       <div className="flex items-start space-x-3">
         <div className="flex-1 min-w-0">
           <JobMetaInfo

@@ -17,7 +17,7 @@ const FacultyCard = ({
       {/* Faculty Image */}
       <div className="relative h-48 bg-gray-100">
         <img
-          className="w-full h-full object-contain bg-gray-700"
+          className="w-full h-full object-contain bg:white overflow-y-auto dark:bg-gray-700"
           src={image || "https://via.placeholder.com/400x300"}
           alt={`Portrait of ${name}`}
         />
