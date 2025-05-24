@@ -20,14 +20,15 @@ const EventCard = ({
     getOrganizer(organizer);
   }, [getOrganizer, organizer]);
   return (
-    <div className="w-full min-w-100 max-w-sm bg-gray-600 rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
+    <div className="w-full min-w-100 max-w-sm bg-white dark:bg-gray-600 rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
       {/* Event Image with Badges */}
-      <div className="relative h-48 bg-gray-100">
+      <div className="relative h-48 bg-white dark:bg-gray-100">
         <img
-          className="w-full h-full object-cover"
-          src={image || "https://via.placeholder.com/400x300"}
+          className="w-full h-full object-cover opacity-30"
+          src="/default-event-img-3.webp"
           alt={`${title} event`}
         />
+        {console.log(image)}
 
         {/* Badges */}
         <div className="absolute top-2 left-2 flex gap-2">
@@ -47,6 +48,7 @@ const EventCard = ({
             </span>
           )}
         </div>
+
         {/* on board */}
         <div 
         className="absolute top-2 right-2 px-2 text-sm font-bold rounded-full  bg-gray-700 hover:bg-gray-800 cursor-pointer text-white"
@@ -58,7 +60,7 @@ const EventCard = ({
       {/* Event Content */}
       <div className="p-5">
         {/* Date & Time */}
-        <div className="flex items-center text-sm text-gray-300 mb-2">
+        <div className="flex items-center text-sm text-gray-400 mb-2">
           <svg
             className="w-4 h-4 mr-1"
             fill="none"
@@ -75,16 +77,16 @@ const EventCard = ({
         </div>
 
         {/* Title & Description */}
-        <h3 className="text-xl text-gray-100 font-bold  mb-2">{title}</h3>
+        <h3 className="text-2xl text-gray-700 dark:text-gray-100 font-bold  mb-2">{title}</h3>
         {description && (
-          <p className="text-gray-200 text-sm mb-4 line-clamp-2">
+          <p className="text-gray-300 dark:text-gray-200 text-sm mb-4 line-clamp-2">
             {description}
           </p>
         )}
 
         {/* Location & Organizer */}
         <div className="space-y-2 mb-4">
-          <div className="flex items-center text-sm text-gray-300">
+          <div className="flex items-center text-sm text-gray-500 dark:text-gray-300">
             <svg
               className="w-4 h-4 mr-1"
               fill="none"
@@ -106,7 +108,7 @@ const EventCard = ({
             {location}
           </div>
           {organizer && (
-            <div className="flex items-center text-sm text-gray-300">
+            <div className="flex items-center text-sm text-gray-500 dark:text-gray-300">
               <svg
                 className="w-4 h-4 mr-1"
                 fill="none"

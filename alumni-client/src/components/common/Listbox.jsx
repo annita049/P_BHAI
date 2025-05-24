@@ -1,34 +1,41 @@
-
 import { useState } from "react";
-import { profileIcon, ChevronDownIcon, companyIcon } from "../../assets/icons";
-const options = [
-  { id: 1, name: "user", icon: profileIcon },
-  { id: 2, name: "company",icon:companyIcon },
-];
+// import { profileIcon, ChevronDownIcon, companyIcon } from "../../assets/icons";
 
 export default function ListBox() {
-  const [selectedOption, setSelectedOption] = useState(options[0]);
-  const [showOptions, setShowOptions] = useState(false);
+  const [dropdownOpen, setDropdownOpen] = useState(false);
+  const [selectedOption, setSelectedOption] = useState("Category");
+
+  const handleDropdownSelect = (value) => {
+    setSelectedOption(value);
+    setDropdownOpen(false);
+  };
+
   return (
-    <div className=" w-15 cursor-pointer">
+    <div className="relative inline-block text-left">
+      {/* Dropdown Toggle Button */}
+
       <button
-        className="flex justify-around items-center py-1 bg-gray-600 w-full rounded-lg hover:bg-gray-500 hover:cursor-pointer transition-colors duration-200"
-        onClick={() => setShowOptions(!showOptions)}>
-        {selectedOption.icon} <span>{ChevronDownIcon}</span>
+        onClick={() => setDropdownOpen(!dropdownOpen)}
+        className="rounded-3xl text-gray-700 ps-4 pe-2 py-1.5 flex items-center space-x-2 focus:outline-none"
+      >
+        <span className="text-sm">{selectedOption}</span>
+        <svg xmlns="http://www.w3.org/2000/svg" className={`h-4 w-4 transition-transform ${dropdownOpen ? "rotate-180" : ""}`} viewBox="0 0 20 20" fill="currentColor">
+          <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
+        </svg>
       </button>
-      {showOptions && (
-        <div className="absolute z-10 bg-gray-600 w-1/4 md:w-1/8 rounded-lg mt-2 ">
-          {options.map((option) => (
-            <div
-              key={option.id}
-              className="flex gap-2 items-center m-1 py-1 px-2 rounded-lg hover:bg-gray-400 cursor-pointer transition-colors duration-200"
-              onClick={() => {
-                setSelectedOption(option);
-                setShowOptions(false);
-              }}>
-              {option.icon}
-              <span>{option.name}</span>
-            </div>
+
+      {/* Dropdown Items */}
+      {dropdownOpen && (
+        <div className="absolute z-10 mt-2 w-48 rounded-md shadow-lg bg-white">
+          {["User", "Company", "Session"].map((item) => (
+            <a
+              key={item}
+              href="#"
+              onClick={() => handleDropdownSelect(item)}
+              className="block px-4 py-2 text-sm text-gray-700 hover:bg-sky-100"
+            >
+              {item}
+            </a>
           ))}
         </div>
       )}

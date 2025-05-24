@@ -14,8 +14,8 @@ function Tag({ Icon, label, selected, onClick, imageSrc, isActive }) {
           className="w-10 h-10 rounded-full object-cover"
         />
       )}
-      {Icon && <span className="icon text-sm">{Icon}</span>}
-      <p className="truncate">{label}</p>
+      {Icon && <span className="icon">{Icon}</span>}
+      <p className="truncate text-[16px]">{label}</p>
     </div>
   );
 }

@@ -14,7 +14,7 @@ import {
   userGroupIcon,
 } from "../assets/icons.jsx";
 const menuItems = [
-  { id: 0, Icon: homeIcon, label: "Home" },
+  { id: 0, Icon: homeIcon, label: "Home"},
   { id: 1, Icon: userGroupIcon, label: "Alumni" },
   { id: 2, Icon: eventIcon, label: "Events" },
   { id: 3, Icon: hiringIcon, label: "Hiring" },
@@ -28,7 +28,7 @@ function Homepage() {
   return (
     <div className="h-screen w-screen grid grid-cols-1 lg:grid-cols-12 bg-[#f3f2f1] dark:bg-slate-900 dark:text-white">
       <div className="hidden lg:col-span-4 xl:col-span-3 lg:block ">
-        <Sidebar {...{ menuItems,selectedTag, setSelectedTag }} />
+        <Sidebar {...{ menuItems, selectedTag, setSelectedTag }} />
       </div>
       <div className=" col-span-1 lg:col-span-8 xl:col-span-9">
         

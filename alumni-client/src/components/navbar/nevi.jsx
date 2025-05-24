@@ -55,7 +55,7 @@ const Navbar = () => {
           {/* Dropdown */}
           <button
             onClick={() => setDropdownOpen(!dropdownOpen)}
-            className="rounded-3xl text-gray-700 ps-4 pe-2 py-2 flex items-center space-x-2 focus:outline-none"
+            className="rounded-3xl text-gray-700 ps-4 pe-2 py-1.5 flex items-center space-x-2 focus:outline-none"
           >
             <span className="text-sm">{selectedOption}</span>
             <svg xmlns="http://www.w3.org/2000/svg" className={`h-4 w-4 transition-transform ${dropdownOpen ? "rotate-180" : ""}`} viewBox="0 0 20 20" fill="currentColor">
@@ -96,36 +96,41 @@ const Navbar = () => {
       {/* Desktop Navbar Links */}
       <div className="hidden md:flex items-center space-x-2 ml-[-100px]">
         {navLinks.map((link) => (
-            <a
+          <Link
             key={link.name}
-            href="#"
+            to={link.path}
             className="group flex items-center relative rounded-3xl hover:bg-[#e8f2f8] py-1.5 px-3 text-[#8D9295] hover:text-[#2992FE] transition"
-            >
+          >
+            {/* Default Icon */}
             <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth="1.5"
-                stroke="currentColor"
-                className="size-7 group-hover:hidden"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth="1.5"
+              stroke="currentColor"
+              className="size-7 group-hover:hidden"
             >
-                {link.path}
+              {link.icon}
             </svg>
+
+            {/* Hover Icon */}
             <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="currentColor"
-                viewBox="0 0 24 24"
-                strokeWidth="1.5"
-                stroke="#e8f2f8"
-                className="size-8 hidden group-hover:block text-[#2992FE]"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+              strokeWidth="1.5"
+              stroke="#e8f2f8"
+              className="size-8 hidden group-hover:block text-[#2992FE]"
             >
-                {link.path}
+              {link.icon}
             </svg>
+
+            {/* Link Name */}
             <span className="hidden lg:group-hover:inline mx-1 text-sm">{link.name}</span>
-            
-            </a>
+          </Link>
         ))}
       </div>
+
 
 
       {/* Logout Button */}
