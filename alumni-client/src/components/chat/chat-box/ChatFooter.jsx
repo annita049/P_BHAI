@@ -51,7 +51,7 @@ function handleSubmit(e) {
         images={formdata.images}
         setImages={(imgs) => setFormdata((prev) => ({ ...prev, images: imgs }))}
       />}
-      <div className="flex m-4 mt-2 p-4 w-full justify-center items-center rounded-2xl bg-gray-700">
+      <div className="flex m-4 mt-2 p-4 w-full justify-center items-center">
         <ImageInput onChange={handleChange} name="images" multiple={true} />
         <div className="w-11/12">
           <Input
@@ -61,7 +61,7 @@ function handleSubmit(e) {
             onChange={handleChange}
           />
         </div>
-        <div className="hover:bg-gray-600 px-3 py-1 text-lg rounded-xl shadow-md transition-all ease-in-out duration-250 cursor-pointer" onClick={handleSubmit}>send</div>
+        <div className="bg-gray-300 dark:hover:bg-gray-600 px-3 py-1 text-lg rounded-xl shadow-md transition-all ease-in-out duration-250 cursor-pointer" onClick={handleSubmit}>send</div>
       </div>
     </>
   );

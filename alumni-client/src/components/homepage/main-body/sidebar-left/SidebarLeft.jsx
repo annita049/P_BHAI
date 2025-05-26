@@ -14,7 +14,7 @@ function SidebarLeft({ sidebarToggler, setSidebarToggler }) {
     getAllUsers();
   }, []);
   return (
-    <div className="bg-gray-600 rounded-xl m-4 pb-2 transition-all ease-in-out duration-1000">
+    <div className="bg-white shadow-md dark:bg-gray-600 rounded-xl m-4 pb-2 transition-all ease-in-out duration-1000">
       <SwitchUserVNotifications {...{ sidebarToggler, setSidebarToggler }} />
       {sidebarToggler === "users" ? (
         <>

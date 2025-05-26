@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from "react";
-import { searchIcon } from "../../assets/icons";
+import React from "react";
 
 function Input({
   type = "text",
@@ -25,7 +24,7 @@ function Input({
         name={name}
         onChange={onChange}
         onClick={onClick}
-        className="shadow appearance-none border border-gray-900 rounded-xl w-full py-3 px-3 text-white text-lg bg-gray-800 leading-tight focus:outline-1 focus:shadow-outline"
+        className="bg-[#F3F3F3] dark:bg-gray-800 rounded-full w-full py-3 px-4 dark:text-stone-50 text-md leading-tight focus:outline-1 focus:shadow-outline"
       />
 
     </div>

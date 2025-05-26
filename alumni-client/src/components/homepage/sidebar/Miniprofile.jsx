@@ -34,8 +34,8 @@ function Miniprofile() {
         </div>
 
         {/* <!-- View Profile Button --> */}
-        <div class="mt-6 mb-6">
-          <a href="#" class="block text-center bg-sky-500 text-white font-medium py-2.5 rounded-2xl hover:bg-sky-600 transition">View Profile</a>
+        <div className="mt-6 mb-6">
+          <a href="#" className="block text-center bg-sky-500 text-white font-medium py-2.5 rounded-2xl hover:bg-sky-600 transition">View Profile</a>
         </div>
         
       </div>

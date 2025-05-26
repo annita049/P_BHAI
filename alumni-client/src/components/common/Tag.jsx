@@ -3,7 +3,7 @@ import React from "react";
 function Tag({ Icon, label, selected, onClick, imageSrc, isActive }) {
   return (
     <div
-      className={`flex w-full justify-start items-center gap-5 px-4 py-2.5 rounded-lg cursor-pointer transition-all duration-200 ${
+      className={`flex w-full justify-start items-center gap-5 px-4 py-2 rounded-lg cursor-pointer transition-all duration-200 ${
         !selected && "hover:bg-[#dfeef4] dark:hover:bg-gray-600"
       } text-lg ${selected ? "bg-[#dbeaf1] dark:hover:bg-gray-600" : ""}`}
       onClick={onClick}>

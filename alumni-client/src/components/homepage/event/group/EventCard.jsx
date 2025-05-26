@@ -25,7 +25,7 @@ const EventCard = ({
       <div className="relative h-48 bg-white dark:bg-gray-100">
         <img
           className="w-full h-full object-cover opacity-30"
-          src="/default-event-img-3.webp"
+          src="/no-img-event.png"
           alt={`${title} event`}
         />
         {console.log(image)}
@@ -77,9 +77,9 @@ const EventCard = ({
         </div>
 
         {/* Title & Description */}
-        <h3 className="text-2xl text-gray-700 dark:text-gray-100 font-bold  mb-2">{title}</h3>
+        <h3 className="text-gray-700 dark:text-gray-100 font-semibold text-xl mb-2">{title}</h3>
         {description && (
-          <p className="text-gray-300 dark:text-gray-200 text-sm mb-4 line-clamp-2">
+          <p className="text-gray-400 font-[300] dark:text-gray-200 text-sm mb-4 line-clamp-2">
             {description}
           </p>
         )}
@@ -128,7 +128,7 @@ const EventCard = ({
 
         {/* Action Button */}
         <button
-          className="w-full bg-purple-600 hover:bg-purple-700 text-white font-medium py-2 px-4 rounded-lg"
+          className="w-full mt-2 my-1.5 bg-purple-600 hover:bg-purple-700 text-white font-medium py-1.5 px-3.5 rounded-lg"
           onClick={() => setOnBoard(eventId)}>
           on board
         </button>

@@ -12,8 +12,8 @@ function PostHeader({  author , createdAt }) {
           />
         </div>
         <div >
-          <p className="text-xl font-semibold">{author?.name??"Full Name"}</p>
-          <p className="text-sm font-normal">{createdAt ? formatSmartDateTime(createdAt):"time"}</p>
+          <p className="text-[17px] font-[500] hover:underline cursor-pointer">{author?.name?? "Full Name"}</p>
+          <p className="text-[13px] font-normal text-gray-400">{createdAt ? formatSmartDateTime(createdAt):"time"}</p>
         </div>
       </div>
   );
